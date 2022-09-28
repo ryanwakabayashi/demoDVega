@@ -20,6 +20,6 @@ public class Link {
     @NonNull
     private String url;
 
-    @ManyToOne
-    private Link link;
+    @OneToMany(mappedBy = "link")
+    private List<Comment> comments = new ArrayList<>();
 }
