@@ -9,6 +9,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
+import java.util.Date;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
@@ -19,12 +20,12 @@ public abstract class Auditable {
     private String createdBy;
 
     @CreatedDate
-    private String createdDate;
+    private Date createdDate;
 
     @LastModifiedBy
     private String lastModifiedBy;
 
     @LastModifiedDate
-    private String lastModifiedDate;
+    private Date lastModifiedDate;
 
 }
